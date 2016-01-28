@@ -11,7 +11,7 @@ orange small date font column two - #f89915
 blackish heading for aside - #010101
 
 gray - #cecccc
-gray for .columnOne - #6c6762
+gray for .primary-content - #6c6762
 gray author - #c2c1c0
 light gray boxes - #f2f1f1 (looks dark on pc's)
 dark gray heading text - #484747
@@ -147,22 +147,12 @@ pre {
 }
 textarea {
 	overflow: auto;
-} /* www.sitepoint.com/blogs/2010/08/20/ie-remove-textarea-scrollbars/ */
-.ie6 legend, .ie7 legend {
-	margin-left: -7px;
-}
 /* Align checkboxes, radios, text inputs with their label by: Thierry Koblentz tjkdesign.com/ez-css/css/base.css  */
 input[type="radio"] {
 	vertical-align: text-bottom;
 }
 input[type="checkbox"] {
 	vertical-align: bottom;
-}
-.ie7 input[type="checkbox"] {
-	vertical-align: baseline;
-}
-.ie6 input {
-	vertical-align: text-bottom;
 }
 /* Hand cursor on clickable input elements */
 label, input[type="button"], input[type="submit"], input[type="image"], button {
@@ -210,11 +200,6 @@ button {
 	width: auto;
 	overflow: visible;
 }
-/* Bicubic resizing for non-native sized IMG:
-   code.flickr.com/blog/2008/11/12/on-ui-quality-the-little-things-client-side-image-resizing/ */
-.ie7 img {
-	-ms-interpolation-mode: bicubic;
-}
 /**
  * You might tweak these..
  */
@@ -252,7 +237,7 @@ a:hover {
 /* general html tags */
 body {
 	font: 62.5%/1.6em Arial, Helvetica, sans-serif;
-	background: #233e5f url(../images/body_bg_grad.jpg) repeat-x;
+	background: #233e5f url('img/body-bg-grad.jpg') repeat-x;
 }
 a {
 	outline: 0;
@@ -263,7 +248,7 @@ a {
 *:focus {
 	outline: none;
 }
-#wrapper {
+.wrapper {
 	width: 960px;
 	margin: 0 auto;
 	font-size: 1.2em;
@@ -272,13 +257,13 @@ header {
 	position: relative;
 	background-color: #666666;
 }
-#miscItems {
+.misc-items {
 	height: 56px;
 	background-color: #0c2745;
 	position: relative;
 }
-#searchContainer {
-	background-image: url(../images/bg_box.png);
+.search-container {
+	background-image: url('img/bg-box.png');
 	background-position: right top;
 	background-repeat: no-repeat;
 	float: right;
@@ -287,7 +272,7 @@ header {
 	padding: 0;
 	width: 258px;
 }
-#searchContainer #search_input {
+.search-container .search-input {
 	background-color: transparent;
 	border: medium none;
 	color: #999999;
@@ -297,34 +282,34 @@ header {
 	margin: 10px 5px 0 28px;
 	width: 185px;
 }
-#searchContainer #search_submit {
+.search-container .search-submit {
 	margin: 5px 0 0 10px;
 	width: 25px;
 }
-#topNav {
+.top-nav {
 	font-size: .9em;
 	padding-left: 95px;
 	width: 347px;
 }
-#topNav li {
+.top-nav li {
 	padding-top: 25px;
 }
-#topNav span {
+.top-nav span {
 	padding: 0 10px;
 }
-#topNav a {
+.top-nav a {
 	color: #fff;
 	text-decoration: none;
 }
-#facebookIcon {
+.facebook-icon {
 	padding: 12px 10px 0 15px;
 }
-#donate {
+.donate {
 	position: absolute;
 	top: 17px;
 	right: 0;
 }
-#logo {
+.logo {
 	position: absolute;
 	top: 10px;
 	left: 0;
@@ -332,9 +317,9 @@ header {
 }
 header nav {
 	height: 72px;
-	background: #666666 url(../images/header_bg.png) no-repeat;
+	background: #666666 url('img/header-bg.png') no-repeat;
 }
-nav ul li, #topNav li {
+nav ul li, .top-nav li {
 	list-style: none;
 	float: left;
 	color: #fff;
@@ -346,7 +331,7 @@ nav ul {
 	left: 150px;*/
 	font-size: 11px;
 }
-nav #navHome a {
+nav .nav-home a {
 	position: absolute;
 	left: 105px;
 	top: 75px;
@@ -355,7 +340,7 @@ nav #navHome a {
 	padding: 10px;
 	text-align: center;
 }
-nav #navAbout a {
+nav .nav-about a {
 	position: absolute;
 	left: 240px;
 	top: 75px;
@@ -364,7 +349,7 @@ nav #navAbout a {
 	padding: 10px;
 	text-align: center;
 }
-nav #navService a {
+nav .nav-service a {
 	position: absolute;
 	left: 385px;
 	top: 75px;
@@ -373,7 +358,7 @@ nav #navService a {
 	padding: 10px;
 	text-align: center;
 }
-nav #navAddict a {
+nav .nav-addict a {
 	position: absolute;
 	left: 505px;
 	top: 75px;
@@ -382,10 +367,10 @@ nav #navAddict a {
 	padding: 10px;
 	text-align: center;
 }
-.ie9 nav #navAddict a {
+.ie9 nav .nav-addict a {
 	left: 535px;
 }
-nav #navAppoint a {
+nav .nav-appoint a {
 	position: absolute;
 	left: 655px;
 	top: 75px;
@@ -394,10 +379,10 @@ nav #navAppoint a {
 	padding: 10px;
 	text-align: center;
 }
-.ie9 nav #navAppoint a {
+.ie9 nav .nav-appoint a {
 	left: 673px;
 }
-nav #navContact a {
+nav .nav-contact a {
 	position: absolute;
 	left: 790px;
 	top: 75px;
@@ -416,13 +401,13 @@ nav a:hover {
 	/*font-weight: bold;*/
   letter-spacing: 0;
 }
-#pageDivider {
-	background: #fff url(../images/bg_div_header.jpg) no-repeat;
+.page-divider {
+	background: #fff url('img/bg-div-header.jpg') no-repeat;
 	height: 374px;
 	position: relative;
 }
-#pageDivider h2 {
-	background: transparent url(../images/header_blurb.png) no-repeat;
+.page-divider h2 {
+	background: transparent url('img/header-blurb.png') no-repeat;
 	width: 680px;
 	height: 78px;
 	position: absolute;
@@ -435,68 +420,68 @@ aside {
 	margin-right: 12px;
 	float: right;/*height: 294px;*/
 }
-aside h2#since1973 {
-	background: transparent url(../images/heading_since_1973.png) no-repeat;
+aside h2.since-1973 {
+	background: transparent url('img/heading-since-1973.png') no-repeat;
 	width: 152px;
 	height: 42px;
 	margin: 16px 10px 0 140px;
 	padding: 10px;
 	position: inherit;
 }
-#mainContent {
+.main-content {
 	width: 960px;
 	float: left;
 	line-height: 1.4em;
 }
-.home #mainContent h1 {
-	background: #fff url(../images/heading_welcome_bhs.png) no-repeat;
+.home .main-content h1 {
+	background: #fff url('img/heading-welcome-bhs.png') no-repeat;
 	color: #000;
 	width: 623px;
 	height: 47px;
 	margin-left: 30px;
 	margin-top: 30px;
 }
-#mainContent #colOne {
+.main-content .primary-content {
 	width: 290px;
 	float: left;
 	padding-left: 30px;
 }
-#mainContent #colTwo {
+.main-content .secondary-content {
 	width: 290px;
 	float: left;
 	padding-left: 25px;
 }
-#mainContent p {
+.main-content p {
 	padding: 10px 0;
 	color: #6c6762;
 }
-#facebookEntry {
-	background: #fff url(../images/bg_facebook_post.png) no-repeat;
+.facebook-entry {
+	background: #fff url('img/bg-facebook-post.png') no-repeat;
 	width: 297px;
 	height: 321px;
 	float: right;
 	margin-top: 5px;
 }
-#facebookEntry h3 {
-	background: #fff url(../images/header_facebook.png) no-repeat;
+.facebook-entry h3 {
+	background: #fff url('img/header-facebook.png') no-repeat;
 	width: 293px;
 	height: 43px;
 	margin-top: 50px;
 }
-#facebookEntry h4 {
+.facebook-entry h4 {
 	color: #282424;
 	padding-left: 30px;
 	padding-top: 5px;
 }
-#facebookEntry h5 {
+.facebook-entry h5 {
 	color: #f9a634;
 	padding-left: 30px;
 	padding-top: 10px;
 }
-#facebookEntry h5 span {
+.facebook-entry h5 span {
 	color: #c2c1c0;
 }
-#facebookEntry p {
+.facebook-entry p {
 	padding-left: 30px;
 	padding-top: 10px;
 	font-size: 11px;
@@ -514,15 +499,15 @@ footer a:hover {
 	text-decoration: underline;
 	color: #fff;
 }
-#footerTop {
+.footer-top {
 	-webkit-box-shadow:  5px 5px 25px 0px #000000;
 	-moz-box-shadow: 5px 5px 25px 0px #000000;
 	box-shadow: 5px 5px 25px 0px #000000;
-	background: url("../images/top_footer_bg.png") no-repeat;
+	background: url("img/top-footer-bg.png") no-repeat;
 	clear: both;
 	height: 139px;
 }
-#footerTop a {
+.footer-top a {
 	color: #fff;
 }
 footer p {
@@ -530,185 +515,185 @@ footer p {
 	font-size: 10px;
 	margin-top: 5px;
 }
-#footerTop div {
+.footer-top div {
 	float: left;
 }
-#footerTop .aboutUsFooter {
+.footer-top .about-us-footer {
 	padding-left: 20px;
 }
-#footerTop .servicesFooter {
+.footer-top .services-footer {
 	padding-left: 80px;
 }
-#footerTop .waysToGetInvolvedFooter {
+.footer-top .ways-to-get-involved-footer {
 	padding-left: 50px;
 }
-h2#aboutUs {
+h2.about-us {
 	width: 166px;
 	height: 30px;
-	background-image: url(../images/bg_about_us.png);
+	background-image: url('img/bg-about-us.png');
 	background-repeat: no-repeat;
 }
-h2#services {
+h2.services {
 	width: 166px;
 	height: 30px;
-	background-image: url(../images/bg_heading_services.jpg);
+	background-image: url('img/bg-heading-services.jpg');
 	background-repeat: no-repeat;
 }
-h2#waysToGetInvolved {
+h2.ways-to-get-involved {
 	width: 166px;
 	height: 30px;
-	background-image: url(../images/bg_heading_ways_tgi.png);
+	background-image: url('img/bg-heading-ways-tgi.png');
 	background-repeat: no-repeat;
 }
-#accred {
+.accred {
 	padding-left: 40px;
 }
-#accred img {
+.accred img {
 	padding: 0 4px;
 }
-#adpCert {
+.adp-cert {
 	margin-top: 10px;
 }
 /*!^peh2^ About Page Styles */
-#mainContent hgroup h5 {
+.main-content hgroup h5 {
 	color: #010101;
 	font-size: 12px;
 	font-weight: bold;
 }
-.columnTwo a, aside a {
+.secondary-content a, aside a {
 	text-decoration: underline;
 }
-#mainNav .current {
+.main-nav .current {
 	color: #f99b15;
 	font-weight: bold;
 }
-#contentContainer {
+.content-container {
 	background-color: #fff;
 }
-.myAboutPage #mainContent h1 {
-	background: url(../images/about_us_heading.png) no-repeat;
+.my-about-page .main-content h1 {
+	background: url('img/about-us-heading.png') no-repeat;
 	width: 107px;
 	height: 21px;
 	float: left;
 	margin-bottom: 10px;
 }
-.myAboutPage #mainContent h2 {
+.my-about-page .main-content h2 {
 	font-size: 16px;
 	color: #f99b15;
 	font-weight: normal;
 	padding-top: 10px;
 }
-#mainContent .breadcrumbs {
+.main-content .breadcrumbs {
 	float: right;
 	margin: 30px 25px 0 0;
 }
-#mainContent .breadcrumbs li {
+.main-content .breadcrumbs li {
 	float: left;
 	list-style: none;
 	padding-right: 2px;
 }
-#mainContent .breadcrumbs li a {
+.main-content .breadcrumbs li a {
 	color: #f99b15;
 	font-size: 11px;
 }
-#mainContent .breadcrumbs li a.currentPage {
+.main-content .breadcrumbs li a.current-page {
 	color: #979899;
 }
-.myAboutPage aside, .getInvolved aside {
+.my-about-page aside, .get-involved aside {
 	float: left;
 	width: 242px;
 	margin: 0;
 	padding: 15px;
 }
-.myAboutPage #mainContent, .getInvolved #mainContent {
+.my-about-page .main-content, .get-involved .main-content {
 	float: right;
 	width: 680px;
 }
 aside hr {
 	margin: 25px 0;
 }
-#otherContent {
+.other-content {
 	padding-top: 15px;
 }
-#contentContainer {
+.content-container {
 	padding-bottom: 25px;
 }
-.columnOne {
+.primary-content {
 	width: 390px;
 	float: left;
 }
-.columnTwo {
+.secondary-content {
 	width: 225px;
 	float: right;
 	padding-right: 40px;
 }
-.columnTwo hgroup h4 {
+.secondary-content hgroup h4 {
 	font-size: 11px;
 	color: #f89915;
 	font-weight: normal;
 	padding-top: 5px;
 }
-.columnTwo p {
+.secondary-content p {
 	font-size: 11px;
 	color: #767474;
 	font-weight: normal;
 }
-.columnTwo hgroup h4 span.author {
+.secondary-content hgroup h4 span.author {
 	font-size: 11px;
 	color: #c2c1c0;
 	font-weight: normal;
 	padding-left: 5px;
 }
-.columnTwo #myFacebookEntry {
+.secondary-content .my-facebook-entry {
 	background: none;
 	height: auto;
 }
-.columnTwo #myFacebookEntry h3 {
-	background: transparent url(../images/latest_news_heading.png) no-repeat;
+.secondary-content .my-facebook-entry h3 {
+	background: transparent url('img/latest-news-heading.png') no-repeat;
 	width: 238px;
 	height: 46px;
 	margin: 0;
 }
-.columnTwo #myFacebookEntry h4 {
+.secondary-content .my-facebook-entry h4 {
 	padding: 0;
 	margin: 0;
 }
-.columnTwo #myFacebookEntry h5 {
+.secondary-content .my-facebook-entry h5 {
 	padding: 0;
 	margin: 0;
 }
-.columnTwo #myFacebookEntry p {
+.secondary-content .my-facebook-entry p {
 	padding: 0;
 	margin: 20px 0 0 0;
 }
-#recentJobPost h3 {
-	background: url(../images/recent_job_post_heading.png) no-repeat;
+.recent-job-post h3 {
+	background: url('img/recent-job-post-heading.png') no-repeat;
 	width: 239px;
 	height: 34px;
 }
-#sideNav {
+.side-nav {
 	margin-top: 15px;
 }
-#sideNav li {
+.side-nav li {
 	float: none;
 	border-bottom: 1px solid #cecccc;
 	padding-top: 5px;
 	padding-bottom: 5px;
 }
-#sideNav li a {
+.side-nav li a {
 	color: #002446;
 	font-size: 12px;
 	padding-left: 15px;
 }
-#sideNav li a.currentPage {
+.side-nav li a.current-page {
 	color: #f99b15;
 	font-weight: bold;
-	background: url(../images/subnav_icon.png) no-repeat;
+	background: url('img/subnav-icon.png') no-repeat;
 }
-#sideNav a.pdfPrivacy {
+.side-nav a.pdf-privacy {
 	float: right;
 }
-.asideBox {
+.aside-box {
 	background-color: #f2f1f1;
 	border: 1px solid #afafaf;
 	padding: 5px;
@@ -717,31 +702,31 @@ aside hr {
 	line-height: 1.1em;
 	margin-bottom: 10px;
 }
-.asideBox img {
+.aside-box img {
 	float: left;
 	width: 90px;
 	padding: 0 5px;
 	margin-top: 10px;
 }
-.asideBox p {
+.aside-box p {
 	width: 100px;
 	float: right;
 	margin-top: 10px;
 }
-#getInvolvedSidebarHeading {
+.get-involved-sidebar-heading {
 	margin-top: 50px;
 	font-size: 24px;
 	color: #f99b15;
 	font-weight: normal;
 	padding-bottom: 10px;
 }
-#successStoriesSidebarHeading {
+.success-stories-sidebar-heading {
 	color: #484747;
 	font-size: 24px;
 	font-weight: normal;
 	padding-bottom: 10px;
 }
-.getInvolved #successStoriesSidebarHeading {
+.get-involved .success-stories-sidebar-heading {
 	color: #484747;
 	font-size: 21px;
 	font-weight: normal;
@@ -750,23 +735,23 @@ aside hr {
 
 /*!^peh2^ Get Involved Page Styles */
 
-.getInvolved #mainContent h1 {
-	background: url(../images/get_involved_heading.png) no-repeat;
+.get-involved .main-content h1 {
+	background: url('img/get-involved-heading.png') no-repeat;
 	width: 152px;
 	height: 31px;	
 }
-.getInvolved #mainContent h2 {
-	background: url(../images/your_support_is_vital_to_our_mission.png) no-repeat;
+.get-involved .main-content h2 {
+	background: url('img/your-support-is-vital-to-our-mission.png') no-repeat;
 	width: 359px;
 	height: 30px;	
 }
-.getInvolved #mainContent h3 {
-	background: url(../images/make_contribution_today.png) no-repeat;
+.get-involved .main-content h3 {
+	background: url('img/make-contribution-today.png') no-repeat;
 	width: 267px;
 	height: 30px;	
 }
-.involvedBox {
-	background: url(../images/orange_box.png) no-repeat;
+.involved-box {
+	background: url('img/orange-box.png') no-repeat;
 	width: 157px;
 	height: 158px;
 	float: left;	
@@ -829,7 +814,7 @@ aside hr {
 	cursor: pointer;
 	-moz-user-select: none;
 	-khtml-user-select: none;
-	background: transparent url(../images/bg_accordion_tabs_sprite.png) no-repeat left bottom;
+	background: transparent url(img/bg-accordion-tabs-sprite.png) no-repeat left bottom;
 	height: 30px;
 	color: #fff;
 }
@@ -859,7 +844,7 @@ aside hr {
 	margin: 0;
 	padding: 0px;
 	height: 176px;
-	font-size: 11px;/*background: transparent url(../images/bg_open_panel.png) no-repeat;*/
+	font-size: 11px;/*background: transparent url(img/bg_open_panel.png) no-repeat;*/
 }
 .AccordionPanelContent p.firstPar {
 	margin: 15px 0 0 30px;
@@ -884,7 +869,7 @@ aside hr {
 .AccordionPanelOpen .AccordionPanelTab {
 	background-color: #eeeeee;
 	height: 30px;
-	background-image: url(../images/bg_accordion_tabs_sprite.png);
+	background-image: url(img/bg-accordion-tabs-sprite.png);
 	background-repeat: no-repeat;
 	background-position: left top;
 }
@@ -1034,7 +1019,7 @@ abbr[title]:after {
 }
 .ir a:after, a[href^="javascript:"]:after, a[href^="#"]:after {
 	content: "";
-}  /* Don't show links for images, or javascript/internal links */
+}  /* Don't show links fimg, or javascript/internal links */
 pre, blockquote {
 	border: 1px solid #999;
 	page-break-inside: avoid;
